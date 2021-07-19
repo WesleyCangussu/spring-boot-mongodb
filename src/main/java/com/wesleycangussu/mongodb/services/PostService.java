@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.wesleycangussu.mongodb.domain.Post;
-import com.wesleycangussu.mongodb.domain.User;
 import com.wesleycangussu.mongodb.repository.PostRepository;
 import com.wesleycangussu.mongodb.services.exception.ObjectNotFoundException;
 
@@ -27,6 +26,6 @@ public class PostService {
 	}
 	
 	public List<Post> findByTitle(String text){
-		return pRepo.findByTitleContainingIgnoreCase(text);
+		return pRepo.FindByTittle(text);
 	}
 }
